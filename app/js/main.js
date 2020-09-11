@@ -11,4 +11,18 @@ $(function(){
     $('.sales__btn-right').removeClass('active');
     $('.sales__address-object').removeClass('active');
   });
-})
+  $(window).scroll(function() {
+		var el = $('header');
+		var className = 'fixed';
+		if (el.length) {
+			if ($(window).scrollTop() > 123) {
+				if (!el.hasClass(className))
+					el.addClass(className);
+			}
+			else {
+				if (el.hasClass(className))
+					el.removeClass(className);
+			}
+		}
+  });
+});  
