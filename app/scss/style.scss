@@ -4,15 +4,13 @@
 body {
   color: $text;
 }
-.fixed {
-  background-color: blue;
-  position: fixed;
-  top: 0;
-  left: 0;
-}
+
 //start header
 .header {
   background-color: #fff;
+  transition: top 1s;
+  height: 122px;
+  top: -122px;
   &__inner {
     display: flex;
     justify-content: space-between;
@@ -40,6 +38,9 @@ body {
       height: 134px;
       top: 18px;
       left: 20px;
+    }
+    &-sticky {
+      display: none;
     }
   }
   &__contacts {
@@ -79,6 +80,9 @@ body {
 .menu__list {
   li {
     display: inline-block;
+    &.header__phone-sticky {
+      display: none;
+    }
     & + li {
       margin-left: 50px;
     }
@@ -91,11 +95,67 @@ body {
     }
   }
 }
+.fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 90px;
+  box-shadow: 7px 5px 5px 0px rgba(0,0,0,0.13);
+  z-index: 99999;
+  font-size: 14px;
+  transition: all 0.5s;
+  .header__box {
+    padding: 0;
+    align-items: center;
+    justify-content: center;
+    height: 90px;
+  }
+  .header__menu {
+    nav.menu {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
+  }
+  .header__logo {
+    display: none;
+  }
+  .header__logo-sticky {
+    display: inline-block;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 71px;
+    height: 65px;
+    margin-right: 70px;
+  }
+  .header__phone {
+    display: none;
+  }
+  .menu__list {
+    li {
+      & + li {
+        margin-left: 35px;
+      }
+      &.header__phone-sticky {
+        display: inline-block;
+        font-size: 20px;
+        a {
+          color: $red;
+        }
+        
+      }
+    }
+  }
+  .header__social {
+    display: none;
+  }
+}
 //end header
 //start banner
 .banner {
   min-height: 772px;
-  
   &__inner {
     position: relative;
     min-height: 772px;
@@ -305,6 +365,7 @@ body {
   &__title {
     margin-left: 119px;
     margin-bottom: 50px;
+    text-align: start;
   }
   &__text {
     margin-left: 274px;
@@ -331,18 +392,6 @@ body {
       padding-left: 26px;
       span {
         display: block;
-      }
-      &::before {
-        content: '';
-        background-image: url(../images/icons/arrow-red-right.svg);
-        width: 11px;
-        height: 12px;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        position: absolute;
-        top: 6px;
-        left: 0;
       }
     }
     &-bottom {
@@ -695,7 +744,6 @@ body {
     background-size: cover;
   }
   &-caption {
-    
     color: $red;
     font-weight: 700;
     font-size: 17px;
@@ -729,7 +777,6 @@ body {
     margin-bottom: 25px;
   }
   &__links {
-
     li {
         margin-bottom: 9px;
       a {
@@ -740,6 +787,151 @@ body {
   }
 }
 //end footer section
+//start townhouse section
+.townhouse {
+  padding: 60px 0px;
+  &__title {
+    margin: 0 auto;
+    margin-bottom: 35px;
+    max-width: 810px;
+  }
+  &__text {
+    font-size: 27px;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  &__list {
+    margin: 0 auto;
+    text-align: center;
+    li {
+      display: inline-block;
+      & + li {
+        margin-left: 5px;
+      }
+      a {
+        font-size: 27px;
+        font-weight: 700;
+        text-decoration: underline;
+        color: $text;
+        position: relative;
+        span {
+          position: absolute;
+          font-size: 14px;
+          top: -8px;
+          margin-left: 2px;
+        }
+        &::after {
+          content: ',';
+          margin-left: 11px;
+        }
+      }
+    }
+  }
+  &__box {
+    padding-bottom: 45px;
+    border-bottom: 1px solid $grey;
+    margin-top: 35px;
+  }
+  &__item {
+    margin-bottom: 50px;
+    &.product__item-right {
+      .product__card {
+        padding-left: 122px;
+      }
+    }
+    .product__text {
+      margin-bottom: 50px;
+    }
+    .product__box {
+      height: 389px;
+      min-height: auto;
+      .product__image {
+        min-height: auto;
+        height: 389px;
+      }
+    }
+  }
+  &__features {
+    display: flex;
+    justify-content: space-between;
+    &-list {
+      width: 50%;
+      padding-left: 8px;
+      ul {
+        display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      height: 195px;
+      li {
+        font-size: 17px;
+        padding-left: 20px;
+        margin-bottom: 25px;
+        max-width: 240px;
+        width: 100%;
+        position: relative;
+      }
+      }
+
+    }
+  }
+  &__price {
+    text-align: center;
+    margin: 0 auto;
+    &-title {
+      color: $red;
+    }
+  }
+  &__btn {
+    padding: 20px 25px;
+    text-transform: uppercase;
+    font-size: 19px;
+    margin-bottom: 15px;
+  }
+}
+.townhouse__describtion{
+  &-inner {
+    padding: 0px 0px 85px 160px;
+  }
+  &-title {
+    text-align: start;
+    margin-bottom: 83px;
+    position: relative;
+    padding: 60px 0px 0px 160px;
+    &::before {
+      content: '';
+      background-image: url(../images/icons/bird_map.svg);
+      display: inline-block;
+      width: 112px;
+      height: 130px;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      position: absolute;
+      left: 26px;
+      top: 0;
+    }
+  }
+  &-box {
+    padding-bottom: 43px;
+  }
+  &-features {
+    font-family: 'Noto Serif', serif;
+    font-weight: 700;
+    font-style: italic;
+    font-size: 22px;
+    line-height: 22px;
+    margin-bottom: 18px;
+  }
+  &-text {
+    font-size: 20px;
+    line-height: 24px;
+  }
+  &-btn {
+    padding: 22px 24px;
+    border-radius: 26px;
+  }
+}
+//end tounhouse section
 
 
 

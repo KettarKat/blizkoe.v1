@@ -68,12 +68,29 @@ body {
   font-weight: 700;
   font-size: 59px;
   line-height: 65px;
+  text-align: center;
 }
 .green-btn {
   color: #fff;
   background: rgb(97,131,36);
   background: linear-gradient(0deg, rgba(97,131,36,1) 0%, rgba(126,163,44,1) 35%);
   box-shadow: 4px 4px 3px 1px rgba(0,0,0,0.11);
+  font-weight: 700;
+  border-radius: 25px;
+}
+.angle-right {
+  &::before {
+    content: '';
+    background-image: url(../images/icons/arrow-red-right.svg);
+    width: 11px;
+    height: 12px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 6px;
+    left: 0;
+  }
 }
 @media (max-width: 720px) {
   .container-fluid {
