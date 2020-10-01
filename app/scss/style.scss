@@ -156,10 +156,30 @@ body {
 //start banner
 .banner {
   min-height: 772px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  
   &__inner {
     position: relative;
     min-height: 772px;
     color: #fff;
+  }
+  &-page {
+    min-height: 750px;
+    .banner__inner {
+      min-height: 750px;
+    }
+    .banner__title {
+      font-size: 72px;
+      line-height: 80px;
+      margin-bottom: 20px;
+
+    }
+    .banner__text {
+      font-size: 45px;
+      line-height: 55px;
+    }
   }
   &__item {
     padding: 0px 80px;    
@@ -172,6 +192,9 @@ body {
     font-weight: 700;
     font-size: 116px;
     line-height: 120px;
+    span {
+      display: block;
+    }
   }
   &__text {
     font-size: 49px;
@@ -932,6 +955,27 @@ body {
   }
 }
 //end tounhouse section
+//start tounhouse-90m section
+.towmhouse-90m { 
+  margin: 70px 0px 32px;
+  &__title {
+    margin-bottom: 30px;
+  }
+  &__describtion {
+    text-align: center;
+    margin-bottom: 40px;
+    span {
+      display: block;
+    }
+    &-title {
+      font-size: 27px;
+      font-weight: 700;
+      text-align: center;
+      margin-bottom: 50px;
+    }
+  }
+}
+//end tounhouse-90m section
 
 
 
