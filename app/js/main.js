@@ -31,4 +31,11 @@ $(function(){
           scrollTop: $(anchor).offset().top - 0
       }, 800);
   });
+  $(".towmhouse-90m__items").slick({
+    dots: false,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    prevArrow: '<button class="slick-arrow slick-prev"><img src="images/icons/shevron-left.png" alt=""></button>',
+    nextArrow: '<button class="slick-arrow slick-next"><img src="images/icons/shevron-right.png" alt=""></button>',
+  })
 });  

@@ -974,6 +974,92 @@ body {
       margin-bottom: 50px;
     }
   }
+  &__item {
+    &-img {
+      background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    max-width: 1096px;
+    min-height: 599px;
+    }
+    &-text {
+      background-color: $grey;
+      text-align: center;
+      font-weight: 700;
+      font-size: 17px;
+      padding: 30px 10px;
+    }
+  }
+  &__items {
+    position: relative;
+  }
+  &__reserve {
+    display: flex;
+    justify-content: space-between;
+    &-text {
+      font-size: 20px;
+      font-weight: 300;
+      color: $red;
+    }
+    &-btn {
+      padding: 20px 30px;
+    }
+  }
+}
+.slick-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: transparent;
+  border: none;
+}
+.slick-prev {
+  left: 0;
+  z-index: 3;
+}
+.slick-next {
+  right: 0;
+}
+.townhouse-90m__features {
+  background-color: $i-green;
+  padding-top: 46px;
+  padding-bottom: 38px;
+  &-inner {
+    
+    
+  }
+  &-list {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    column-count: 2;
+    column-gap: 38px;
+    height: 525px;
+    li {
+      max-width: 490px;
+      font-size: 17px;
+      position: relative;
+      padding-left: 45px;
+      font-weight: 300;
+      margin-bottom: 20px;
+      span {
+        font-weight: 700;
+      }
+    }
+  }   
+  &-icon {
+    position: absolute;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 29px;
+    height: 30px;
+    left: 0;
+    &-house {
+      width: 26px;
+      height: 28px;
+    }
+  }
 }
 //end tounhouse-90m section
 
